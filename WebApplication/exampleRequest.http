@@ -1,0 +1,7 @@
+﻿POST https://localhost:5001/FancyCalculations
+Content-Type: application/json
+
+{
+  "anInputField": 3,
+  "anotherInputField": 4
+}

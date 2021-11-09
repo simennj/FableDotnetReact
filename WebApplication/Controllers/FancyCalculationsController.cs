@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication.Controllers
 {
@@ -7,7 +6,9 @@ namespace WebApplication.Controllers
     [Route("[controller]")]
     public class FancyCalculationsController : ControllerBase
     {
-        [HttpGet]
-        public object Get() => throw new NotImplementedException();
+        [HttpPost]
+        public BusinessLogic.FancyCalculations.AnOutputType
+            Calculate(BusinessLogic.FancyCalculations.AnInputType input) =>
+            BusinessLogic.FancyCalculations.calculateSomeFancyStuff(input);
     }
 }
