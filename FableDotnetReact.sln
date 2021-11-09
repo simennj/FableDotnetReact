@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplic
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "BusinessLogic", "BusinessLogic\BusinessLogic.fsproj", "{26B99063-7FDB-4046-8C37-B5E7B864ABA3}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "App", "WebApplication\ClientApp\ClientApp.Fable\src\App.fsproj", "{78408FF6-741C-43E7-8726-93E2EC67022E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{26B99063-7FDB-4046-8C37-B5E7B864ABA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26B99063-7FDB-4046-8C37-B5E7B864ABA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26B99063-7FDB-4046-8C37-B5E7B864ABA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78408FF6-741C-43E7-8726-93E2EC67022E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78408FF6-741C-43E7-8726-93E2EC67022E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78408FF6-741C-43E7-8726-93E2EC67022E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78408FF6-741C-43E7-8726-93E2EC67022E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
