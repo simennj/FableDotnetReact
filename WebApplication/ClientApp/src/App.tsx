@@ -1,33 +1,34 @@
 ﻿import {ChangeEvent, useCallback, useMemo, useState} from "react";
-import {calculateSomeFancyStuff} from "./BusinessLogic";
+import {calculateSomeFancyStuff} from "./fableOutput/BusinessLogic/FancyCalculations";
+import Big from "big.js";
 
 export const App = () => {
-    const [input, setInput] = useState({anInputField: '0', anotherInputField: '0'})
+    const [input, setInput] = useState({AnInputField: '0', AnotherInputField: '0'})
     const inputSetter = useCallback(({target}: ChangeEvent<HTMLInputElement>) => {
         setInput(prevState => ({...prevState, [target.name]: target.value}))
     }, [])
     const output = useMemo(() => calculateSomeFancyStuff({
-        anInputField: parseFloat(input.anInputField),
-        anotherInputField: parseFloat(input.anotherInputField)
+        AnInputField: new Big(input.AnInputField),
+        AnotherInputField: new Big(input.AnotherInputField)
     }), [input])
     console.log(input, output)
     return <>
         <label>
             AnInput
-            <input name='anInputField' value={input.anInputField} onChange={inputSetter}/>
+            <input name='AnInputField' value={input.AnInputField} onChange={inputSetter}/>
         </label>
         <label>
             AnotherInput
-            <input name='anotherInputField' value={input.anotherInputField} onChange={inputSetter}/>
+            <input name='AnotherInputField' value={input.AnotherInputField} onChange={inputSetter}/>
         </label>
         <hr/>
         <label>
             AnOutput
-            <input value={output.anOutputField} readOnly={true}/>
+            <input value={output.AnOutputField.toString()} readOnly={true}/>
         </label>
         <label>
             AnotherOutput
-            <input value={output.anotherOutputField} readOnly={true}/>
+            <input value={output.AnotherOutputField.toString()} readOnly={true}/>
         </label>
     </>
 }

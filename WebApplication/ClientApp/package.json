@@ -7,6 +7,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@types/big.js": "^6.0.2",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
     "react-scripts": "^4.0.3",
@@ -16,8 +17,8 @@
     "extends": "react-app"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "dotnet fable ClientApp.Fable/src -o src/fableOutput && react-scripts build",
+    "start": "dotnet fable watch ClientApp.Fable/src -o src/fableOutput --run react-scripts start",
     "eject": "react-scripts eject"
   },
   "browserslist": {
