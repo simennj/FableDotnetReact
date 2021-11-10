@@ -1,4 +1,4 @@
-﻿import {ChangeEvent, useCallback, useMemo, useState} from "react";
+import {ChangeEvent, useCallback, useMemo, useState} from "react";
 import {calculateSomeFancyStuff} from "./fableOutput/BusinessLogic/FancyCalculations";
 import Big from "big.js";
 
